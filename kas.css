@@ -1,0 +1,97 @@
+body {
+    background: #050b1a;
+    font-family: Arial;
+    color: white;
+    padding: 20px;
+}
+
+.box {
+    background: #0b1b3a;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 0 25px #00aaff;
+}
+
+h2 {
+    text-align: center;
+    color: #00aaff;
+}
+
+h1 {
+    text-align: center;
+    color: #00ffcc;
+}
+
+input {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    width: 150px;
+}
+
+button {
+    padding: 8px 15px;
+    border-radius: 10px;
+    background: #00aaff;
+    font-weight: bold;
+    border: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background: #00aaff;
+    color: black;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.total {
+    background: #001f3f;
+    font-weight: bold;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    background: #00aaff;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.paraf-col {
+    text-align: right; /* gambar di sisi kanan */
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.paraf-col img {
+    border-radius: 8px;
+    display: inline-block;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Animasi glow menyala */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #00f9ff; }
+    50% { box-shadow: 0 0 15px #00f9ff; }
+    100% { box-shadow: 0 0 5px #00f9ff; }
+}

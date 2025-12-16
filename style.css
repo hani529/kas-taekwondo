@@ -1,0 +1,842 @@
+/* ===== RESET SEMUA ELEMEN ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== BACKGROUND UTAMA CYBERPUNK ===== */
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, rgba(0,120,255,0.25), transparent 45%),
+        radial-gradient(circle at bottom, rgba(0,60,180,0.25), transparent 45%),
+        linear-gradient(135deg, #020207, #050b18, #020207);
+    background-size: 200% 200%;
+    animation: cyberMove 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eafcff;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* ===== ANIMASI BACKGROUND ===== */
+@keyframes cyberMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== CONTAINER UTAMA ===== */
+.container {
+    width: 95%;
+    max-width: 1300px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(5, 15, 25, 0.88);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0,180,255,0.45);
+    box-shadow:
+        0 0 35px rgba(0,180,255,0.45),
+        inset 0 0 25px rgba(0,120,255,0.25);
+}
+
+
+
+.container-ambil{
+    width: 100%;
+    max-width: 330px;
+    margin: 60px auto;
+    background:#111;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 0 20px #00e1ff;
+}
+
+
+
+.container-members {
+    width: 95%;
+    max-width: 1300px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(5, 15, 25, 0.88);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0,180,255,0.45);
+    box-shadow:
+        0 0 35px rgba(0,180,255,0.45),
+        inset 0 0 25px rgba(0,120,255,0.25);
+}
+
+
+
+
+/* ===== JUDUL ===== */
+.judul {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #4ddcff;
+    text-shadow: 0 0 15px #4ddcff, 0 0 35px #0066ff;
+    letter-spacing: 2px;
+}
+
+h3 {
+    color: #00aaff;
+    margin-top: 5px;
+    text-shadow: 0 0 15px #00aaff;
+}
+
+
+
+
+h4 {
+    color: #00aaff;
+    margin-top: 5px;
+    text-shadow: 0 0 15px #00aaff;
+}
+
+.notice-tunggakan {
+    margin-top: 15px;
+  
+    padding: 12px 18px;
+   
+    font-size: 18px;
+    font-weight: 500;
+    color: #ff0000; /* biar teks ga terlalu putih */
+}
+
+.notice-10k {
+    margin-top: 15px;
+  
+    padding: 12px 18px;
+   
+    font-size: 18px;
+    font-weight: 500;
+    color: #00ddff; /* biar teks ga terlalu putih */
+}
+
+
+.notice-5k {
+    margin-top: 15px;
+  
+    padding: 12px 18px;
+   
+    font-size: 11px;
+    font-weight: 500;
+    color: #00ff2fee; /* biar teks ga terlalu putih */
+}
+
+
+/* ===== TOMBOL & LINK ===== */
+button, a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: 1px solid #4ddcff;
+    background: transparent;
+    color: #4ddcff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow:
+        0 0 1px #4ddcff,
+        0 0 1px rgba(0,120,255,0.6);
+    transition: 0.25s;
+}
+
+button:hover, a:hover {
+    color: #001018;
+    background: linear-gradient(45deg, #4ddcff, #0066ff);
+    box-shadow:
+        0 0 25px #4ddcff,
+        0 0 50px #0066ff,
+        0 0 90px #4ddcff;
+    transform: scale(1.05);
+}
+
+button:active, a:active {
+    transform: scale(0.92);
+    box-shadow: 0 0 100px white;
+}
+
+/* ===== PEMBUNGKUS TABEL ===== */
+.tabel-wrap {
+    width: 100%;
+    overflow-x: auto; /* penting buat scroll horizontal */
+    -webkit-overflow-scrolling: touch; /* smooth scroll iOS */
+    margin-top: 20px;
+    border-radius: 16px;
+    box-shadow:
+        0 0 1px rgba(0,180,255,0.8),
+        0 0 1px rgba(0,120,255,0.9),
+        inset 0 0 15px rgba(0,180,255,0.4);
+    border: 2px solid rgba(34, 0, 255, 0.8);
+}
+
+/* ===== TABEL ===== */
+table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    /* Glass Effect */
+    background: rgba(0, 0, 0, 0.45); /* transparan */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 0 25px rgba(0,120,255,0.15);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #00f7ff;  
+    color: #eafcff;
+    text-shadow: 0 0 5px #00f7ff;
+    box-shadow:
+        0 0 2px #00f7ff,
+        0 0 4px #00f7ff,
+        inset 0 0 3px #00aeff4e;
+}
+
+th {
+    background: linear-gradient(180deg, #001933, #000814);
+    box-shadow: inset 0 0 10px #00f7ff66;
+}
+
+td:hover {
+    background: rgba(0,120,255,0.25);
+    box-shadow: inset 0 0 18px #4ddcff;
+}
+
+/* ===== MENU BAWAH ===== */
+.menu-bawah {
+    position: 20px;   /* ✅ biar jadi patokan datetime */
+    padding-bottom: 80px; /* ✅ ruang buat tanggal & jam */
+     
+    color: #00ffff;
+    text-shadow: 0 0 6px #00ffff;
+}
+
+/* ===== WARNA KHUSUS ===== */
+.dolar {
+    color: #00ff6a;
+    text-shadow: 0 0 10px #00ff6a, 0 0 25px #00ff6a;
+}
+
+.sekolah {
+    color: #ff2d2d;
+    text-shadow: 0 0 10px #ff2d2d, 0 0 25px #ff0000;
+}
+
+/* ===== TOMBOL TABEL BERWARNA ===== */
+td a.tunggakan { background-color: #ff4d4d; color: #000; transition: 0.3s; }
+td a.bayar { background-color: #4dff4d; color: #000; transition: 0.3s; }
+td a.transaksi { background-color: #4dffff; color: #000; transition: 0.3s; }
+td a.edit { background-color: #4dff4d; color: #000; transition: 0.3s; }
+td a.hapus { background-color: #ff4d4d; color: #000; transition: 0.3s; }
+
+/* ===== RESPONSIF UNTUK HP ===== */
+@media only screen and (max-width: 768px) {
+    body { font-size: 20px; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    p, li, td { font-size: 18px; }
+}
+
+/* ===== LOGIN BOX KACA BURAM (GLASS TABLE) ===== */
+.login-box {
+    width: 380px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08); /* efek kaca */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 2px solid rgba(0,180,255,0.6);
+
+    box-shadow:
+        0 0 25px rgba(0,180,255,0.6),
+        inset 0 0 25px rgba(255,255,255,0.15);
+}
+
+/* ===== TABEL LOGIN KACA ===== */
+.login-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: rgba(0, 20, 50, 0.45);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 0 15px rgba(0,180,255,0.5),
+        0 0 20px rgba(0,180,255,0.4);
+}
+
+.login-table td {
+    padding: 10px;
+    border: 1px solid rgba(0,180,255,0.5);
+    color: #4ddcff;
+    text-shadow: 0 0 8px #4ddcff;
+}
+
+/* Input di dalam tabel */
+.login-table input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0,10,30,0.9);
+    border: 1px solid rgba(0,180,255,0.6);
+    color: #4ddcff;
+    outline: none;
+}
+
+/* Tombol di dalam tabel */
+.login-table button {
+    width: 100%;
+}
+
+.datetime-bar {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 10px 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00bfff;
+    z-index: 50;
+    text-align: left;
+    line-height: 1.4;
+    font-family: "Segoe UI";
+}
+
+/* ===== TABEL TRANSAKSI ===== */
+.wrap-tabel-transaksi {
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.45); /* transparan */
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #00f7ff;  
+    color: #eafcff;
+    text-shadow: 0 0 5px #00f7ff;
+    box-shadow:
+        0 0 2px #00f7ff,
+        0 0 4px #00f7ff,
+        inset 0 0 3px #00aeff4e;
+}
+
+th {
+    background: linear-gradient(180deg, #001933, #000814);
+    box-shadow: inset 0 0 10px #00f7ff66;
+}
+
+td:hover {
+    background: rgba(0,120,255,0.25);
+    box-shadow: inset 0 0 18px #4ddcff;
+}
+
+/* ===== FORM PEMBAYARAN ===== */
+.form-transaksi {
+    display: flex;
+    flex-direction: column;  /* Menyusun input dan tombol secara vertikal */
+    align-items: flex-start; /* Menyusun elemen ke kiri */
+    margin-top: 15px;
+}
+
+.form-transaksi input {
+    margin-bottom: 10px; /* Memberikan jarak antara input dan tombol bayar */
+    padding: 10px;
+    width: 250px; /* Lebar input agar lebih rapi */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.form-transaksi button {
+    padding: 10px 20px;
+    background-color: #1f7bb6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-transaksi button:hover {
+    background-color: #0f5b7e;
+}
+
+/* ===== MENU BAWAH ===== */
+.menu-transaksi {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.btn-kembali {
+    padding: 10px 20px;
+    background-color: #1f7bb6;
+    color: white;
+    align-content: center;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.btn-kembali:hover {
+    background-color: #0f5b7e;
+}
+
+
+
+/* ✅ WARNA TEKS INPUT NOMINAL JADI BIRU MENYALA */
+.form-transaksi input {
+    color: #00ccff;              /* warna biru neon */
+    background: #050b15;         /* background gelap biar kontras */
+    border: 1px solid #00ccff;   /* garis biru */
+    box-shadow: 0 0 8px #00ccff; /* efek nyala */
+    padding: 10px 14px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* ✅ WARNA SAAT DIKETIK */
+.form-transaksi input:focus {
+    box-shadow: 0 0 15px #00e5ff;
+    border-color: #00e5ff;
+}
+
+/* ✅ WARNA PLACEHOLDER */
+.form-transaksi input::placeholder {
+    color: #66d9ff;
+}
+
+/* ============================= */
+/* ✅ JUDUL TUNGGAKAN */
+/* ============================= */
+.judul-tunggakan {
+    text-align: center;                /* posisikan tengah */
+    color: cyan;                       /* warna biru menyala */
+    margin-top: 30px;                  /* jarak atas */
+}
+
+/* ============================= */
+/* ✅ KOTAK UTAMA */
+/* ============================= */
+.box-tunggakan {
+    width: 90%;                        /* lebar 90% */
+    max-width: 500px;                 /* batas lebar */
+    margin: auto;                     /* tengah */
+    background: #001f3f;              /* biru gelap */
+    padding: 20px;                    /* jarak dalam */
+    border-radius: 15px;              /* sudut tumpul */
+    color: white;                     /* warna teks */
+}
+
+/* ============================= */
+/* ✅ NOTIF */
+/* ============================= */
+.notif {
+    text-align: center;               /* teks tengah */
+    margin-bottom: 15px;              /* jarak bawah */
+}
+
+/* ============================= */
+/* ✅ TABEL */
+/* ============================= */
+.tabel-tunggakan {
+    width: 100%;                      /* lebar penuh */
+    border-collapse: collapse;       /* rapat */
+}
+
+.tabel-tunggakan th,
+.tabel-tunggakan td {
+    border: 1px solid cyan;          /* garis biru */
+    padding: 8px;                    /* jarak */
+    text-align: center;              /* tengah */
+}
+
+/* ============================= */
+/* ✅ INFO SETOR */
+/* ============================= */
+.info-setor {
+    text-align: center;              /* tengah */
+    margin-top: 15px;                /* jarak atas */
+}
+
+/* ============================= */
+/* ✅ AREA TOMBOL */
+/* ============================= */
+.tombol-area {
+    display: flex;                   /* sejajar */
+    justify-content: space-between; /* kiri kanan */
+    margin-top: 20px;                /* jarak atas */
+}
+
+/* ============================= */
+/* ✅ TOMBOL */
+/* ============================= */
+.btn-kembali,
+.btn-transfer {
+    background: cyan;               /* biru menyala */
+    color: black;         
+       align-content: center;      /* teks hitam */
+    padding: 10px 20px;             /* ukuran */
+    border-radius: 10px;            /* tumpul */
+    text-decoration: none;          /* hilangkan garis */
+    border: none;                   /* tanpa garis */
+    cursor: pointer;                /* kursor tangan */
+}
+
+
+
+
+
+.login-box {
+    width: 100%;
+    max-width: 380px;
+    background: rgba(0, 20, 40, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 25px cyan;
+}
+
+.login-form {
+    margin-top: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 5px;    
+    border-radius: 20px;
+    background: rgba(172, 189, 223, 0.25);
+    outline: none;
+}
+
+.login-form button {
+    width: 90%;
+    padding: 10px;
+     margin-bottom: 12px;
+    border-radius: 20px;
+    background: transparent; 
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-bendahara {
+    background: orange;
+}
+
+.login-page {
+    min-height: 100vh;
+    margin: 0;
+    background:
+        radial-gradient(circle at top, rgba(0,120,255,0.25), transparent 45%),
+        radial-gradient(circle at bottom, rgba(0,60,180,0.25), transparent 45%),
+        linear-gradient(135deg, #020207, #050b18, #020207);
+    background-size: 200% 200%;
+    animation: cyberMove 12s ease infinite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Biar nggak lebar-lebar kaya login */
+.container {
+    width: 100%;
+    max-width: 480px;   /* ini kunci biar ramping */
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.4); /* sesuaikan tema kamu */
+    box-shadow: 0 8px 20px rgba(17, 0, 253, 0.436);
+}
+
+
+
+.tabel-wrap td input,
+.tabel-wrap td select {
+    width: 90% !important;
+    padding: 10px !important;
+    margin-bottom: 12px !important;
+    border-radius: 20px !important;
+    background: transparent !important;
+    font-weight: bold !important;
+    border: 2px solid #00bfff !important;
+    color: white !important;
+    outline: #00bfff  !important;
+}
+
+
+/* Label biar rapi */.form-table .label {
+    padding-bottom: 12px;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Tombol juga sekalian disamain */
+.btn-submit, .btn-back {
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+
+/* Kunci isi biar nggak keluar dari container */
+.tabel-wrap {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 14px; /* JARAK ANTAR INPUT KAYA FORM LOGIN */
+}
+
+/* Label */
+.tabel-wrap .label {
+    color: white;
+    font-weight: bold;
+    padding-bottom: 6px;
+    display: block;
+}
+
+/* Input & select jadi seperti login form */
+.tabel-wrap input,
+.tabel-wrap select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 20px;
+    background: rgba(172, 189, 223, 0.25);
+    font-weight: bold;
+    border: none;
+    color: white;
+    outline: none;
+    box-sizing: border-box; /* WAJIB BIAR NGGAK KELUAR */
+}
+
+/* Tombol biar serasi */
+.btn-submit, .btn-back {
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+.gender[data-gender="L"] {
+    color: #00bfff; 
+    font-weight: bold;
+    text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff;
+}
+
+.gender[data-gender="P"] {
+    color: #ff69b4; 
+    font-weight: bold;
+    text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4;
+}
+
+
+
+
+.kolom-belumjoin {
+    font-size: 8px; 
+    color: #ccc;
+    text-align: center;
+    letter-spacing: 0.3px;
+    padding: 5px 0;
+    opacity: 100%;
+}
+
+
+td.nama {
+    text-align: left !important;
+    padding-left: 8px;
+}
+
+.judul-kas {
+    color: #00f9ff;
+    text-align: left;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00f9ff;
+    animation: glow-title 1.5s infinite alternate;
+}
+
+@keyframes glow-title {
+    0%   { text-shadow: 0 0 5px #00f9ff; }
+    50%  { text-shadow: 0 0 20px #00f9ff, 0 0 30px #00f9ff; }
+    100% { text-shadow: 0 0 5px #00f9ff; }
+}
+
+
+
+.btn-riwayat {
+    padding: 5px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.btn-hijau {
+    background-color: #28a745;
+    box-shadow: 0 0 8px #28a745;
+    animation: glow-hijau 1.5s infinite alternate;
+}
+
+.btn-merah {
+    background-color: #dc3545;
+    box-shadow: 0 0 8px #dc3545;
+    animation: glow-merah 1.5s infinite alternate;
+}
+
+@keyframes glow-hijau {
+    0% { box-shadow: 0 0 5px #28a745; }
+    50% { box-shadow: 0 0 15px #28a745; }
+    100% { box-shadow: 0 0 5px #28a745; }
+}
+
+@keyframes glow-merah {
+    0% { box-shadow: 0 0 5px #dc3545; }
+    50% { box-shadow: 0 0 15px #dc3545; }
+    100% { box-shadow: 0 0 5px #dc3545; }
+}
+
+
+.ket-masuk {
+    color: #28a745; /* hijau */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ket-keluar {
+    color: #dc3545; /* merah */
+    font-weight: bold;
+     font-size: 18px;
+}
+
+
+/* Style default tombol tahun */
+.year-btn {
+    color: #7df9ff;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;   /* OVAL */
+    border: 2px solid #00eaff44;
+    transition: 0.25s ease;   /* ANIMASI HALUS */
+}
+
+/* Hover */
+.year-btn:hover {
+    background: #00eaff55;
+    box-shadow: 0 0 10px #00eaff;
+}
+
+/* Jika aktif / tahun yang sedang dipilih */
+.active-year {
+    background: #00eaff;
+    color: #000 !important;
+    box-shadow: 0 0 15px #00eaff, 0 0 25px #00eaff;
+    transform: scale(1.1);       /* ANIMASI MEMBESAR */
+}
+
+/* Animasi masuk saat berpindah tahun */
+.active-year {
+    animation: popIn 0.3s ease forwards;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.7); opacity: 0; }
+    70% { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+
+.note-kas{
+    opacity: 0.75;
+    text-align: left;
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #eaeaea;
+}
+
+
+a.active{
+  background: #007bff;
+  color: #fff;
+}
+
+.input-form {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: .2s;
+}
+
+.input-form:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76,175,80,.2);
+}
